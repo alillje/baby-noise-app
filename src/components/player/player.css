@@ -14,14 +14,14 @@
     grid-area: 1 / 2 / 2 / 2;
     display: flex;
     justify-content: center;
-    align-items: middle;;
+    align-items: center;;
     cursor: pointer;
     margin: 10px;
 }
 
 .playButtonImg {
-    max-width:100%;
-    max-height:auto;
+    max-width:80%;
+    max-height:80%;
     cursor: pointer;
 }
 
