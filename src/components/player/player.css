@@ -14,7 +14,7 @@
 }
 
 .playerWrapper:hover {
-  background-color: hsla(221, 93%, 55%, 0.078);
+  background-color: hsla(0, 0%, 67%, 0.014);
 }
 
 .playButtonWrapper {
@@ -29,6 +29,7 @@
 .playButtonImg {
   max-width: 80%;
   max-height: 80%;
+  opacity: 50%;
 }
 
 .textContent {
