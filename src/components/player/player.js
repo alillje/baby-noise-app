@@ -3,12 +3,10 @@ import * as React from "react";
 import { useState, useRef, useEffect } from "react";
 import Playbutton from "./img/play-button.png";
 import PauseButton from "./img/pause-button.png";
-import audioController from "../../services/audio-controller";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { startPlaying } from "../../redux/reducers/audio";
 import { stopPlaying } from "../../redux/reducers/audio";
 import store from "../../redux/store";
-import { AdUnitsOutlined } from "@mui/icons-material";
 
 // Pause icon credit <a href="https://www.flaticon.com/free-icons/pause" title="pause icons">Pause icons created by Kiranshastry - Flaticon</a>
 // Play icon credit <a href="https://www.flaticon.com/free-icons/pause" title="pause icons">Pause icons created by IYAHICON - Flaticon</a>
@@ -23,7 +21,6 @@ const Player = ({ nameOfSound, audioFile }) => {
   const [paused, setPaused] = useState(true);
 
   const isPlaying = useSelector((state) => state.audio);
-  const dispatch = useDispatch();
   const audio = useRef(new Audio(audioFile));
 
   const play = () => {
@@ -41,8 +38,8 @@ const Player = ({ nameOfSound, audioFile }) => {
   const pause = () => {
     setPaused(true);
     store.dispatch(stopPlaying());
-    audio.current.pause();
     audio.current.currentTime = 0;
+    audio.current.pause();
   };
 
   useEffect(() => {
@@ -60,20 +57,19 @@ const Player = ({ nameOfSound, audioFile }) => {
     // If another audio is playing, pause the current audio
     if (isPlaying && isPlaying.playing !== audio.current.src) {
       setPaused(true);
-
+      audio.current.currentTime = 0;
       audio.current.pause();
     }
 
   }, [isPlaying]);
 
   return (
-    <div className="playerWrapper">
+    <div className="playerWrapper" onClick={paused ? play : pause}>
       <div className="playButtonWrapper">
         <img
           className="playButtonImg"
           src={!paused ? PauseButton : Playbutton}
           alt="Pause button"
-          onClick={paused ? play : pause}
         ></img>
       </div>
       <div className="textContent">{nameOfSound}</div>

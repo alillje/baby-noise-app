@@ -9,7 +9,7 @@
   grid-template-rows: 200px repeat(5, 1fr) auto;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  background-color: #fcfcfc;
+  background-color: #adadad34;
 
 }
 
@@ -24,9 +24,11 @@
 }
 .layoutMain {
   grid-area: 2 / 2 / auto / 6;
-  background-color: #ffffff;
+  background-color: hsla(0, 0%, 95%, 0.665);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
 
 }
