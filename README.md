@@ -6,13 +6,13 @@ The application will produce different noises and nature sounds.
 In version 1.0.0 the available sounds are:
 
 - White Noise
-- Brown Noises
+- Brown Noise
 - Pink Noise
-- Wind sounds
-- Raind & Thunder sounds
-- Ocean Waves sounds
-- Winter Wind sounds
-- Arctic Wind sounds
+- Wind Sounds
+- Raind & Thunder Sounds
+- Ocean Waves Sounds
+- Winter Wind Sounds
+- Arctic Wind Sounds
 
 ## Development
 

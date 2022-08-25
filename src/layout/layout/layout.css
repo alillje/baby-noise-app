@@ -34,6 +34,14 @@
 
 }
 
+.layoutFooter {
+  grid-area: 3 / 1 / 4 / 8;
+  color: #bbbbbb51;
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
 @media screen and (max-width: 900px){
   .layoutContainer {
     grid-template-columns: 100%;
@@ -56,5 +64,10 @@
     grid-column: span 5;
     transition: (-webkit-transform ease 250ms); 
     transition: (transform ease 250ms);
+    }
+
+    .layoutFooter {
+
+      margin-top: 50px;    
     }
 } 

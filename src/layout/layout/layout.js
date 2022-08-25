@@ -22,6 +22,7 @@ const Layout = ({ children }) => {
 
       <div className="layoutMain">{children}</div>
       <div className="layoutRight"></div>
+      <div className="layoutFooter">&#169; Andreas Lillje</div>
     </div>
   )
 }
