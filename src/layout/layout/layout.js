@@ -1,7 +1,6 @@
-import './layout.css'
-import * as React from 'react'
-import Header from '../header/header'
-
+import "./layout.css";
+import * as React from "react";
+import Header from "../header/header";
 
 /**
  * Layout Component.
@@ -11,20 +10,18 @@ import Header from '../header/header'
  * @returns {React.ReactElement} - Layout Component.
  */
 const Layout = ({ children }) => {
-
   return (
     <div className="layoutContainer">
       <div className="layoutHeader">
         <Header />
       </div>
-      <div className="layoutSidebar">
-      </div>
+      <div className="layoutSidebar"></div>
 
       <div className="layoutMain">{children}</div>
       <div className="layoutRight"></div>
       <div className="layoutFooter">&#169; Andreas Lillje</div>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

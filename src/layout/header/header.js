@@ -1,6 +1,6 @@
-import './header.css'
-import * as React from 'react'
-import Logo from './img/baby-sleep-noise.png';
+import "./header.css";
+import * as React from "react";
+import Logo from "./img/baby-sleep-noise.png";
 
 /**
  * Topbar Component.
@@ -9,15 +9,12 @@ import Logo from './img/baby-sleep-noise.png';
  * @returns {React.ReactElement} - Sidebar Component.
  */
 const TopBar = () => {
-
-
-return (
-<div className="headerWrapper">
-    <div className="headerContent">
-    <img className="headerLogo" src={Logo} alt="logo"></img>
+  return (
+    <div className="headerWrapper">
+      <div className="headerContent">
+        <img className="headerLogo" src={Logo} alt="logo"></img>
+      </div>
     </div>
-
-</div>
-  )
-}
-export default TopBar
+  );
+};
+export default TopBar;

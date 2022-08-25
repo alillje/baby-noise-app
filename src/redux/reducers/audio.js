@@ -5,14 +5,14 @@
  * @author Andreas Lillje <a.lillje@gmail.com>
  */
 
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 // Create a user slice with different actions
 export const audioSlice = createSlice({
-  name: 'audio',
+  name: "audio",
   initialState: {
     isPlaying: false,
-    playing: null
+    playing: null,
   },
   reducers: {
     /**
@@ -22,8 +22,8 @@ export const audioSlice = createSlice({
      * @param {object} action - Object containing the different state values to be set.
      */
     startPlaying: (state, action) => {
-      state.isPlaying = true
-      state.playing = action.payload.playing
+      state.isPlaying = true;
+      state.playing = action.payload.playing;
     },
     /**
      * Stops playing audio.
@@ -31,11 +31,11 @@ export const audioSlice = createSlice({
      * @param {object} state - Redux state object.
      */
     stopPlaying: (state) => {
-      state.isPlaying = false
-      state.playing = null
-    }
-  }
-})
+      state.isPlaying = false;
+      state.playing = null;
+    },
+  },
+});
 
-export const { startPlaying, stopPlaying } = audioSlice.actions
-export default audioSlice.reducer
+export const { startPlaying, stopPlaying } = audioSlice.actions;
+export default audioSlice.reducer;

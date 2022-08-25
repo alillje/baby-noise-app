@@ -23,6 +23,9 @@ const Player = ({ nameOfSound, audioFile }) => {
   const isPlaying = useSelector((state) => state.audio);
   const audio = useRef(new Audio(audioFile));
 
+  /**
+   * Plays a sound.
+   */
   const play = () => {
     store.dispatch(
       startPlaying({
@@ -35,6 +38,9 @@ const Player = ({ nameOfSound, audioFile }) => {
     audio.current.play();
   };
 
+  /**
+   * Pauses a sound.
+   */
   const pause = () => {
     setPaused(true);
     store.dispatch(stopPlaying());
@@ -60,7 +66,6 @@ const Player = ({ nameOfSound, audioFile }) => {
       audio.current.currentTime = 0;
       audio.current.pause();
     }
-
   }, [isPlaying]);
 
   return (
