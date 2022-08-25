@@ -12,6 +12,7 @@ export const audioSlice = createSlice({
   name: 'audio',
   initialState: {
     isPlaying: false,
+    playing: null
   },
   reducers: {
     /**
@@ -22,6 +23,7 @@ export const audioSlice = createSlice({
      */
     startPlaying: (state, action) => {
       state.isPlaying = true
+      state.playing = action.payload.playing
     },
     /**
      * Stops playing audio.
@@ -30,6 +32,7 @@ export const audioSlice = createSlice({
      */
     stopPlaying: (state) => {
       state.isPlaying = false
+      state.playing = null
     }
   }
 })
