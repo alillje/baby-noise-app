@@ -1,6 +1,6 @@
 import './header.css'
 import * as React from 'react'
-import Logo from './img/baby-noise.png';
+import Logo from './img/baby-sleep-noise.png';
 
 /**
  * Topbar Component.

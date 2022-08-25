@@ -1,8 +1,8 @@
 import "./player.css";
 import * as React from "react";
 import { useState, useRef, useEffect } from "react";
-import Playbutton from "./img/play-button.png";
-import PauseButton from "./img/pause-button.png";
+import PlayButton from "./img/play-512.png";
+import PauseButton from "./img/pause-512.png";
 import { useSelector } from "react-redux";
 import { startPlaying } from "../../redux/reducers/audio";
 import { stopPlaying } from "../../redux/reducers/audio";
@@ -68,7 +68,7 @@ const Player = ({ nameOfSound, audioFile }) => {
       <div className="playButtonWrapper">
         <img
           className="playButtonImg"
-          src={!paused ? PauseButton : Playbutton}
+          src={!paused ? PauseButton : PlayButton}
           alt="Pause button"
         ></img>
       </div>
