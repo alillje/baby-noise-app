@@ -17,12 +17,12 @@ import { AdUnitsOutlined } from "@mui/icons-material";
  *
  * @returns {React.ReactElement} - Sidebar Component.
  */
-const Player = ({ noise }) => {
+const Player = ({ nameOfSound, audioFile }) => {
   const [paused, setPaused] = useState(true);
 
   const isPlaying = useSelector((state) => state.audio.isPlaying);
   const dispatch = useDispatch();
-  const audio = useRef(new Audio(sound));
+  const audio = useRef(new Audio(audioFile));
 
   const play = () => {
     store.dispatch(startPlaying());
@@ -57,7 +57,7 @@ const Player = ({ noise }) => {
           onClick={paused ? play : pause}
         ></img>
       </div>
-      <div className="textContent">{noise}</div>
+      <div className="textContent">{nameOfSound}</div>
     </div>
   );
 };
