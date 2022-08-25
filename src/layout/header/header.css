@@ -35,3 +35,11 @@
     }
     
 }
+
+@media screen and (max-width: 400px){
+    .headerLogo {
+        max-height: auto;
+        max-width: 200px;
+    }
+    
+}
