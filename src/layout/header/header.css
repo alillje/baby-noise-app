@@ -23,6 +23,15 @@
 
 }
 
-headerLogo {
-    width: 100%;
+.headerLogo {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 900px){
+    .headerLogo {
+        max-height: auto;
+        max-width: 400px;
+    }
+    
 }

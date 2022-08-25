@@ -7,7 +7,7 @@
 
   grid-template-columns: 1.5fr repeat(4, 1fr) 1.5fr;
   grid-template-rows: 200px repeat(5, 1fr) auto;
-  grid-column-gap: 20px;
+  grid-column-gap: 0px;
   grid-row-gap: 20px;
   background-color: #adadad34;
 
@@ -18,7 +18,7 @@
 
 }
 .layoutHeader {
-  grid-area: 1 / 1 / 2 / 8;
+  grid-area: 1 / 1 / 2 / 7;
   z-index: 1500;
 
 }
@@ -39,9 +39,10 @@
 
 @media screen and (max-width: 900px){
   .layoutContainer {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 100%;
     gap: 0;
-  }
+  
+}
 
   .layoutSidebar {
     grid-area: 0;
@@ -59,12 +60,4 @@
     transition: (-webkit-transform ease 250ms); 
     transition: (transform ease 250ms);
     }
-}
-
-@media print {
-  .layoutMain {
-    grid-area: 2 / 1 / auto / 6;
-    margin: 20px 20px 20px 20px;
-
-  }
-}
+} 
