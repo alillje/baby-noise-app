@@ -3,7 +3,6 @@ import * as React from "react";
 import { useState, useRef, useEffect } from "react";
 import Playbutton from "./img/play-button-2.png";
 import PauseButton from "./img/pause-button.png";
-import sound from "./sounds/test-sound.wav";
 import audioController from "../../services/audio-controller";
 import { useSelector, useDispatch } from "react-redux";
 import { startPlaying } from "../../redux/reducers/audio";
@@ -45,7 +44,14 @@ const Player = ({ nameOfSound, audioFile }) => {
         audio.current.currentTime = 0;
         audio.current.play()
     })
-  }, []);
+
+    if (!isPlaying) {
+      setPaused(true);
+      audio.current.pause()
+    }
+    console.log(isPlaying)
+    console.log()
+  }, [isPlaying]);
 
   return (
     <div className="playerWrapper">
